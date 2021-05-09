@@ -1,10 +1,9 @@
 name:                SkellOut
 version:             0.1.0.0
-github:              "githubuser/SkellOut"
+github:              "Chiel92/SkellOut"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2021 Author name here"
+author:              "Chiel ten Brinke"
+copyright:           "2021 Chiel ten Brinke"
 
 extra-source-files:
 - README.md
@@ -17,10 +16,12 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/SkellOut#readme>
+description:         Please see the README on GitHub at <https://github.com/Chiel92/SkellOut#readme>
 
 dependencies:
 - base >= 4.7 && < 5
+- process
+- HTF
 
 library:
   source-dirs: src
