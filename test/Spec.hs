@@ -1,9 +1,12 @@
-{-# OPTIONS_GHC -F -pgmF htfpp #-}
+module Main where
 
-import Test.Framework
+import qualified Test
+import System.Exit
 
 main :: IO ()
-main = htfMain htf_thisModulesTests
-
-prop_add_commutative :: Int -> Int -> Bool
-prop_add_commutative x y = x + y == y + x
+main = do
+  -- add test runners into the array for each module
+  good <- and <$> sequence [Test.runTests]
+  if good
+     then exitSuccess
+     else exitFailure
